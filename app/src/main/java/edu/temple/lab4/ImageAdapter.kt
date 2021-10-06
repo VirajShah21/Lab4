@@ -13,7 +13,7 @@ class ImageAdapter(_images: Array<Int>, _names: Array<String>) :
 
     private val images = _images
     private val names = _names
-    
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -28,9 +28,7 @@ class ImageAdapter(_images: Array<Int>, _names: Array<String>) :
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         viewHolder.imageView.setImageResource(images[position])
         viewHolder.imageView.setOnClickListener {
-            it.rootView.findViewById<ImageView>(R.id.largeImage)
-                .setImageResource(images[position])
-            it.rootView.findViewById<TextView>(R.id.textView).text = names[position]
+            // Replace with onclick stuff
         }
     }
 
