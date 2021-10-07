@@ -1,11 +1,11 @@
 package edu.temple.lab4
 
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class ImageAdapter(_images: Array<Int>, _names: Array<String>) :
@@ -28,7 +28,11 @@ class ImageAdapter(_images: Array<Int>, _names: Array<String>) :
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         viewHolder.imageView.setImageResource(images[position])
         viewHolder.imageView.setOnClickListener {
-            // Replace with onclick stuff
+            val imageInfo = Intent(MainActivity.activity, ImageInfo::class.java).apply {
+                putExtra("image", images[position])
+                putExtra("label", names[position])
+            }
+            MainActivity.activity.startActivity(imageInfo)
         }
     }
 
