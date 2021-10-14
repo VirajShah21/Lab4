@@ -24,6 +24,8 @@ class ImageInfo : AppCompatActivity() {
         val image = intent.getIntExtra("image", 0)
 
         findViewById<ImageView>(R.id.imageDisplayer).setImageResource(image)
+
+        this.actionBar?.title = getString(R.string.title_activity_image_info)
     }
 }
 

@@ -37,5 +37,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Icon Information" />
+        app:title="@string/title_activity_image_info" />
 </androidx.constraintlayout.widget.ConstraintLayout>
