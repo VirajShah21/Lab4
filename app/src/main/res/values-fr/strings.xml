@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Galerie d\'icônes</string>
+    <string name="main_title">Galerie d\'icônes de Viraj</string>
     <string name="title_activity_image_info">Informations sur l\'image</string>
     <string name="gallery_help_text">Veuillez cliquer sur une icône ci-dessous pour en savoir plus.</string>
     <string-array name="icons">

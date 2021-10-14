@@ -31,6 +31,6 @@ class MainActivity : AppCompatActivity() {
             resources.getStringArray(R.array.icons)
         )
         activity = this
-
+        title = getString(R.string.main_title)
     }
 }
