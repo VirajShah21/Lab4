@@ -1,7 +1,7 @@
 package edu.temple.lab4
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -28,18 +28,7 @@ class MainActivity : AppCompatActivity() {
                 R.drawable.spotify,
                 R.drawable.uber
             ),
-            arrayOf(
-                "Amazon Shopping",
-                "Google Assistant",
-                "Instructure Canvas",
-                "Google Chrome",
-                "Contacts",
-                "Facebook",
-                "Netflix",
-                "EMail Client",
-                "Spotify Music",
-                "Uber Ride Share"
-            )
+            resources.getStringArray(R.array.icons)
         )
         activity = this
 

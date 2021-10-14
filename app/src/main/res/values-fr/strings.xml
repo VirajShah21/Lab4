@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Galerie d\'icônes</string>
+    <string name="title_activity_image_info">Informations sur l\'image</string>
+    <string name="gallery_help_text">Veuillez cliquer sur une icône ci-dessous pour en savoir plus.</string>
+    <string-array name="icons">
+        <item>Achats Amazon</item>
+        <item>Assistant Google</item>
+        <item>Instructure Canvas</item>
+        <item>Google Chrome</item>
+        <item>Demande de contact</item>
+        <item>Facebook</item>
+        <item>Films et émissions de télévision Netflix</item>
+        <item>Client de messagerie</item>
+        <item>Spotify Musique</item>
+        <item>Partage de covoiturage Uber</item>
+    </string-array>
+</resources>
