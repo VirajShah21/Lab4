@@ -2,9 +2,12 @@ package edu.temple.lab4
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentContainerView
 
 class MainActivity : AppCompatActivity() {
+    companion object {
+        lateinit var activity: MainActivity
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,8 +28,10 @@ class MainActivity : AppCompatActivity() {
             ), resources.getStringArray(R.array.icons)
         )
 
-//        findViewById<FragmentContainerView>(R.id.displayFragment).
+        supportFragmentManager.beginTransaction().add(R.id.displayFragment, displayFragment)
+            .add(R.id.selectionFragment, selectionFragment).commit()
 
 
+        activity = this
     }
 }

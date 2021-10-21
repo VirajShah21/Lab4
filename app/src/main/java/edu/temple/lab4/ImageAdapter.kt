@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import org.jetbrains.annotations.NotNull
 
 class ImageAdapter(_images: Array<Int>, _names: Array<String>) :
     RecyclerView.Adapter<ImageAdapter.ViewHolder>() {
@@ -25,8 +26,9 @@ class ImageAdapter(_images: Array<Int>, _names: Array<String>) :
         return viewHolder
     }
 
-    override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-        viewHolder.imageView.setImageResource(images[position])
+    override fun onBindViewHolder(viewHolder: ViewHolder, @NotNull position: Int) {
+        val image = images[position]
+        viewHolder.imageView.setImageResource(image)
         viewHolder.imageView.setOnClickListener {
             val imageInfo = Intent(MainActivity.activity, ImageInfo::class.java).apply {
                 putExtra("image", images[position])
