@@ -5,18 +5,18 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.AppBarConfiguration
-import edu.temple.lab4.databinding.ActivityImageInfoBinding
+import edu.temple.lab4.databinding.FragmentDisplayBinding
 
 class ImageInfo : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityImageInfoBinding
+    private lateinit var binding: FragmentDisplayBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityImageInfoBinding.inflate(layoutInflater)
+        binding = FragmentDisplayBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -24,8 +24,6 @@ class ImageInfo : AppCompatActivity() {
         val image = intent.getIntExtra("image", 0)
 
         findViewById<ImageView>(R.id.imageDisplayer).setImageResource(image)
-
-        this.actionBar?.title = getString(R.string.title_activity_image_info)
     }
 }
 

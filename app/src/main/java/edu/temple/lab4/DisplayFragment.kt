@@ -26,7 +26,7 @@ class DisplayFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val rootView =
-            inflater.inflate(edu.temple.lab4.R.layout.activity_image_info, container, false)
+            inflater.inflate(edu.temple.lab4.R.layout.fragment_display, container, false)
 
         val iconImageView = rootView.findViewById<ImageView>(R.id.imageDisplayer)
         val labelView = rootView.findViewById<TextView>(R.id.label)
