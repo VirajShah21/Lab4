@@ -30,11 +30,7 @@ class ImageAdapter(_images: Array<Int>, _names: Array<String>) :
         val image = images[position]
         viewHolder.imageView.setImageResource(image)
         viewHolder.imageView.setOnClickListener {
-            val imageInfo = Intent(MainActivity.activity, ImageInfo::class.java).apply {
-                putExtra("image", images[position])
-                putExtra("label", names[position])
-            }
-            MainActivity.activity.startActivity(imageInfo)
+            MainActivity.activity.displayFragment.update(images[position], names[position])
         }
     }
 

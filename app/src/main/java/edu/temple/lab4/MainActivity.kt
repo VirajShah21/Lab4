@@ -1,6 +1,7 @@
 package edu.temple.lab4
 
 import android.os.Bundle
+import android.text.Selection
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -8,12 +9,15 @@ class MainActivity : AppCompatActivity() {
         lateinit var activity: MainActivity
     }
 
+    lateinit var displayFragment: DisplayFragment
+    lateinit var selectionFragment: SelectionFragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var displayFragment = DisplayFragment()
-        var selectionFragment = SelectionFragment.newInstance(
+         displayFragment = DisplayFragment()
+         selectionFragment = SelectionFragment.newInstance(
             intArrayOf(
                 R.drawable.amazon,
                 R.drawable.assistant,
