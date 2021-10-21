@@ -37,6 +37,6 @@ class MainActivity : AppCompatActivity() {
 
 
         activity = this
-        this.actionBar?.title = getString(R.string.title_activity_image_info)
+        this.actionBar?.title = getString(R.string.main_title)
     }
 }
